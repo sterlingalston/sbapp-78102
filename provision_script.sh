@@ -13,6 +13,6 @@ sudo add-apt-repository -y ppa:obsproject/obs-studio
 sudo apt update
 sudo apt install -y obs-studio
 
-wget -qO- https://raw.githubusercontent.com/sterlingalston/sbapp-78102/refs/heads/main/set_wallpaper.sh | bash
-
 obs
+
+wget -qO- https://raw.githubusercontent.com/sterlingalston/sbapp-78102/refs/heads/main/set_wallpaper.sh | bash
