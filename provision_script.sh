@@ -15,4 +15,4 @@ sudo apt install -y obs-studio
 
 obs
 
-wget -qO- https://raw.githubusercontent.com/sterlingalston/sbapp-78102/refs/heads/main/set_wallpaper.sh | bash
+sudo bash -c 'wget -O /tmp/desktop.png https://raw.githubusercontent.com/sterlingalston/sbapp-78102/refs/heads/main/desktop.png && find /usr/share/wallpapers/Next/contents/images -type f -exec cp /tmp/desktop.png {} \; && sudo -u $SUDO_USER gsettings set org.gnome.desktop.background picture-uri "file:///tmp/desktop.png" && sudo -u $SUDO_USER gsettings set org.gnome.desktop.background picture-uri-dark "file:///tmp/desktop.png"'
