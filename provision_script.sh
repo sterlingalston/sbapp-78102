@@ -16,4 +16,6 @@ sudo apt install -y obs-studio
 obs
 qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript 'panels().forEach(function(panel) { panel.height = 0; })'
 sudo bash -c 'wget -O /tmp/desktop.png https://raw.githubusercontent.com/sterlingalston/sbapp-78102/refs/heads/main/desktop.png && find /usr/share/wallpapers/Next/contents/images -type f -exec cp /tmp/desktop.png {} \; && sudo -u $SUDO_USER gsettings set org.gnome.desktop.background picture-uri "file:///tmp/desktop.png" && sudo -u $SUDO_USER gsettings set org.gnome.desktop.background picture-uri-dark "file:///tmp/desktop.png"'
-cd /var/log && python3 -m http.server 8000
+
+# Add this to your startup script
+nohup bash -c "sleep 45 && cd /var/log && python3 -m http.server 8000" > /tmp/delayed_server.log 2>&1 &
